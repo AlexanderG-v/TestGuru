@@ -1,3 +1,7 @@
 # frozen_string_literal: true
 
-VERSION = '0.1.0'
+module TestGuru
+  class Application < Rails::Application
+    VERSION = '0.1.0'
+  end
+end
