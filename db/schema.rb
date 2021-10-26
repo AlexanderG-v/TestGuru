@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_10_25_224139) do
 
   create_table "answers", force: :cascade do |t|
+    t.string "body", null: false
     t.boolean "correct", default: false, null: false
     t.integer "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -37,10 +38,11 @@ ActiveRecord::Schema.define(version: 2021_10_25_224139) do
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 1, null: false
-    t.string "author", null: false
     t.integer "category_id", null: false
+    t.integer "author_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
   end
 
@@ -55,4 +57,5 @@ ActiveRecord::Schema.define(version: 2021_10_25_224139) do
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "tests"
   add_foreign_key "tests", "categories"
+  add_foreign_key "tests", "users", column: "author_id"
 end
