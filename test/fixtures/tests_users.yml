@@ -2,8 +2,8 @@
 
 one:
   user: one
-  test: 
+  test: one
 
 two:
   user: two
-  test: 
+  test: two

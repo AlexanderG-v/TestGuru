@@ -8,18 +8,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-categories = Category.create([
+categories = Category.create!([
                                { title: 'История' },
                                { title: 'Биология' },
                                { title: 'Литература' }
                              ])
 
-users = User.create([
+users = User.create!([
                       { name: 'Александр', email: 'alexandr@gmail.com', password_digest: '12345' },
                       { name: 'Anonymous', emael: 'anjnymous@gmail.com', password_digest: '67890' }
                     ])
 
-tests = Test.create([
+tests = Test.create!([
                       { title: 'Онлайн-тесты по истории 5 класс', level: 1,
                         caterory: categories[0], author: users[0] },
                       { title: 'Онлайн-тесты по истории 9 класс', level: 2,
@@ -37,7 +37,7 @@ tests = Test.create([
 
                     ])
 
-questions = Question.create([
+questions = Question.create!([
                               {
                                 body: 'В 988 году великий князь Владимир в качестве государственной религии принял...', test: tests[0]
                               },
@@ -85,7 +85,7 @@ questions = Question.create([
                               { body: 'С чего начинается сочинение-рассуждение?', test: tests[5] }
                             ])
 
-answers = Answer.create([
+answers = Answer.create!([
                           { body: 'Христианство', question: questions[0], correct: true },
                           { body: 'Ислам', question: questions[0] },
                           { body: 'Иудаизм', question: questions[0] },
