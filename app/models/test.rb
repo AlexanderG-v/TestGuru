@@ -5,7 +5,7 @@ class Test < ApplicationRecord
 
   has_many :questions, dependent: :destroy
   has_many :tests_users, dependent: :destroy
-  has_many :users, through: :tests_users, dependent: :destroy
+  has_many :users, through: :tests_users
 
   def self.list_tests_by_category(title_category)
     joins(:category)
