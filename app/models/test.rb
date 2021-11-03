@@ -15,17 +15,13 @@ class Test < ApplicationRecord
   scope :easy_tests, -> { where(level: 0..1) }
   scope :mid_tests, -> { where(level: 2..4) }
   scope :hard_tests, -> { where(level: 5..Float::INFINITY) }
-  scope :list_tests_by_category, -> (title_category) {
+  scope :tests_by_category, -> (title_category) {
                                    joins(:category)
                                      .where(category: { title: title_category })
                                      .order(title: :desc)
-                                     .pluck(:title)
                                  }
 
-  # def self.list_tests_by_category(title_category)
-  #  joins(:category)
-  #    .where(categories: { title: title_category })
-  #    .order(title: :desc)
-  #    .pluck(:title)
-  # end
+  def self.list_tests_by_category(title_category)
+    tests_by_category(title_category).pluck(:title)
+  end
 end
