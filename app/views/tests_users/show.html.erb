@@ -1,6 +1,14 @@
 <h1><%= @tests_user.test.title %></h1>
 
 <b>
+  Total number of questions: <%= @tests_user.test.questions.count %>
+</b><br>
+
+<b>
+  Сurrent question number: <%= @tests_user.current_question_number %>
+</b><br>
+
+<b>
   <%= @tests_user.current_question.body %>
 </b>
 
