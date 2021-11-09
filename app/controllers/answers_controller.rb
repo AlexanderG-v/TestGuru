@@ -5,13 +5,13 @@ class AnswersController < ApplicationController
   def show; end
 
   def new
-    @answer = @question.answer.new
+    @answer = @question.answers.new
   end
 
   def edit; end
 
   def create
-    @answer = Answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
 
     if @answer.save
       redirect_to @answer
@@ -30,7 +30,7 @@ class AnswersController < ApplicationController
 
   def destroy
     @answer.destroy
-    respond_to @answer.question
+    redirect_to @answer.question
   end
 
   private
