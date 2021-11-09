@@ -25,10 +25,7 @@ class TestsUser < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answer_count = correct_answer.count
-
-    (correct_answer_count == correct_answer.where(id: answer_ids).count) && 
-    correct_answer_count == answer_ids.count
+    correct_answer.ids.sort == answer_ids.map(&:to_i).sort
   end
 
   def correct_answer
