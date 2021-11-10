@@ -4,6 +4,7 @@ class TestsUser < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
+  before_update :before_udate_next_question
 
   def current_question_number
     test.questions.index(current_question) + 1
@@ -22,11 +23,8 @@ class TestsUser < ApplicationRecord
   end
 
   def accept!(answer_ids)
-    if correct_answer?(answer_ids)
-      self.result += 1
-    end
+    self.result += 1 if correct_answer?(answer_ids)
 
-    self.current_question = next_question
     save!
   end
 
@@ -44,7 +42,7 @@ class TestsUser < ApplicationRecord
     current_question.answers.correct_answer
   end
 
-  def next_question
-    test.questions.order(:id).where('id > ?', current_question.id).first
+  def before_udate_next_question
+    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end
