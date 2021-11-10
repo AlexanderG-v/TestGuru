@@ -1,1 +1,9 @@
 <h1><%= @tests_user.test.title %> test was completed!</h1>
+
+<% if @tests_user.rete? %>
+  <p>Successful completion of the test. You scored: <b style="color: #008000"> <%= @tests_user.success_rate %>%</b></p> 
+<% else %>
+  <p>The test failed. You scored: <b style="color: #FF0000"> <%= @tests_user.success_rate %>%</b></p> 
+<% end %>
+
+<%= link_to 'Back', tests_path %>

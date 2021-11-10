@@ -8,6 +8,14 @@ class TestsUser < ApplicationRecord
   def current_question_number
     test.questions.index(current_question) + 1
   end
+
+  def success_rate
+    (100 / test.questions.count * result.to_f).round
+  end
+
+  def rete?
+    success_rate >= 85
+  end
   
   def completed?
     current_question.nil?
