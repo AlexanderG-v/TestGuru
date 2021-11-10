@@ -1,21 +1,23 @@
 class TestsUser < ApplicationRecord
+
+  SUCCESS_RATIO = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
-  before_validation :before_validation_set_first_question, on: :create
-  before_update :before_udate_next_question
+  before_validation :before_validation_set_current_question
 
   def current_question_number
-    test.questions.index(current_question) + 1
+    test.questions.order(:id).where('id < ?', current_question.id).size + 1
   end
 
   def success_rate
     (100 / test.questions.count * result.to_f).round
   end
 
-  def rete?
-    success_rate >= 85
+  def rate?
+    success_rate >= SUCCESS_RATIO
   end
   
   def completed?
@@ -30,19 +32,23 @@ class TestsUser < ApplicationRecord
 
   private
 
-  def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?
+  def before_validation_set_current_question
+    self.current_question = next_question
+  end
+
+  def next_question
+    if current_question.nil?
+      test.questions.order(:id).first
+    else
+      test.questions.order(:id).where('id > ?', current_question.id).first
+    end
   end
 
   def correct_answer?(answer_ids)
-    correct_answer.ids.sort == answer_ids.map(&:to_i).sort
+    correct_answer.ids.sort == answer_ids.to_a.map(&:to_i).sort
   end
 
   def correct_answer
     current_question.answers.correct_answer
-  end
-
-  def before_udate_next_question
-    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end
