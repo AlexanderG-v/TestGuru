@@ -1,0 +1,25 @@
+<h1><%= @tests_user.test.title %></h1>
+
+<b>
+  Total number of questions: <%= @tests_user.test.questions.count %>
+</b><br>
+
+<b>
+  Сurrent question number: <%= @tests_user.current_question_number %>
+</b><br>
+
+<b>
+  <%= @tests_user.current_question.body %>
+</b>
+
+<%= form_with url: tests_user_path(@tests_user), local: true, method: :put do |form| %>
+  <%= form.collection_check_boxes :answer_ids, @tests_user.current_question.answers, :id, :body, include_hidden:
+  false do |b| %>
+    <p>
+      <%= b.check_box id: "answer_ids_#{b.object.id}" %>
+      <%= b.label %>
+    </p>
+  <% end %>
+
+  <p><%= form.submit 'Next' %></p>
+<% end %>

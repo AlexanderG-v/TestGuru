@@ -10,4 +10,8 @@ class User < ApplicationRecord
   def list_tests_by_level(level)
     tests.where(level: level)
   end
+
+  def tests_user(test)
+    tests_users.order(id: :desc).find_by(test_id: test.id)
+  end
 end
