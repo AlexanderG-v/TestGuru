@@ -8,12 +8,17 @@
   <%= @test.level %>
 </p>
 
+<strong>Questions:</strong><br>
+
 <%= link_to 'Add question', new_test_question_path(@test) %>
 
-<p>
-  <strong>Questions:</strong>
+<table>
+  <tr>
+    <th>Questions body</th>
+    <th colspan="2">Actions</th> 
+  </tr>
   <%= render @test.questions %>
-</p>
+</table>
 
 <%= link_to 'Edit', edit_test_path(@test) %>
 <%= link_to 'Back', tests_path %>
