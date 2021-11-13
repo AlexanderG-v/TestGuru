@@ -2,7 +2,6 @@
 require 'digest/sha1'
 
 class User < ApplicationRecord
-  EMAIL_REGEX = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i.freeze
 
   has_many :tests_users, dependent: :destroy
   has_many :tests, through: :tests_users
@@ -13,7 +12,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
   validates :email, uniqueness: true, on: :create
-  validates :email, format: { with: EMAIL_REGEX }, on: :create
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, on: :create
 
   def list_tests_by_level(level)
     tests.where(level: level)

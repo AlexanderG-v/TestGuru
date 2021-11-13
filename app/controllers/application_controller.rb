@@ -1,17 +1,15 @@
 class ApplicationController < ActionController::Base
 
-helper_method :current_user,
-              :logged_in?
+  helper_method :current_user,
+                :logged_in?
 
-private
+  private
 
   def authenticate_user!
     unless current_user
+      cookies[:original_path] = request.path
       redirect_to login_path, alert: 'Verify Email and Password please'
     end
-
-    cookies[:email] = current_user&.email
-    cookies[:original_path] = request.path
   end
 
   def current_user
@@ -24,7 +22,6 @@ private
 
   def log_out
     session.delete(:user_id)
-    cookies.delete :original_path
     @current_user = nil
   end
 end
