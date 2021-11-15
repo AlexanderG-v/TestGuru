@@ -3,7 +3,7 @@
 
 <% if user_signed_in? %>
   <p class="nav user">
-    Welcome, <b><%= current_user.name %></b> Guru
+    Welcome, <b><%= current_user.first_name %></b> Guru
   <%= link_to 'logout', destroy_user_session_path, method: :delete %>
   </p>
 <% else %>
