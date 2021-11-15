@@ -2,13 +2,17 @@
 
 <h2>Question body: <%= @question.body %></h2>
 
-<h2>Answer</h2>
+<h2>Answer:</h2>
 
 <%= link_to 'New answer', new_question_answer_path(@question) %>
 
-<ol>
+<table>
+  <tr>
+    <th>Answer body</th>
+    <th colspan="2">Actions</th> 
+  </tr>
   <%= render @question.answers %>
-</ol>
+</table>
 
 <%= link_to 'Edit', edit_question_path(@question) %>
 <%= link_to 'Back', test_path(@question.test_id) %>
