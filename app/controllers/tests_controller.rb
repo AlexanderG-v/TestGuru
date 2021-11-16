@@ -7,13 +7,8 @@ class TestsController < ApplicationController
   end
 
   def start
+    @test = Test.find(params[:id])
     current_user.tests.push(@test)
     redirect_to current_user.tests_user(@test)
-  end
-
-  private
-
-  def find_test
-    @test = Test.find(params[:id])
   end
 end
