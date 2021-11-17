@@ -40,7 +40,7 @@ class Admin::QuestionsController < Admin::BaseController
   private
 
   def question_params
-    params.require(:question).permit(:dody)
+    params.require(:question).permit(:body, :test_id)
   end
 
   def find_test
