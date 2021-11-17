@@ -1,0 +1,12 @@
+<%= form_with model: [:admin, @test, @question] do |form| %>
+  <%= render 'shared/errors', resource: @question %>
+
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %><br>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
