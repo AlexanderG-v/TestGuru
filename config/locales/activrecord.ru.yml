@@ -1,0 +1,18 @@
+ru:
+  activerecord:
+    models:
+      test: "Тест"
+
+    attributes:
+      test:
+        title: "Название"
+        author: "Автор"
+        category: "Категория"
+        level: "Уровень"
+
+    errors:
+      messages:
+        blank: "не может быть пустым"
+        required: "должен существовать"
+        greater_than: "должен быть больше чем %{count}"
+        taken: "уже занято"

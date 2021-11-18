@@ -1,37 +1,87 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+  link_to_new_test: "New test"
+  link_to_show: "Show"
+  link_to_edit: "Edit"
+  link_to_delete: "Delete"
+  confirm: "Are you sure?"
+  link_to_back: "Back"
+  link_to_add_questions: "Add questions"
+  link_to_new_answer: "New answer"
 
-  tests:
-    index:
-      header: "Tricky Tests"
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+      question:
+        create: "Create Question"
+        update: "Update Question"
+      ansewer:
+        create: "Create Answer"
+        update: "Update Answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        body: "Body"
+      answer:
+        body: "Body"
+        correct: "Correct"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      update:
+        success: "Test was successfully udated."
+      destroy: 
+        success: "Test was successfully deleted."
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        questions_count: "Questions count"
+        actions: "Actions"
+      new:
+        header: "Create new test"
+      show:
+        title: "Title: %{title}"
+        level: "Level: %{level}"
+        questions: "Questions:"
+        actions: "Actions"
+      edit:
+        header: "Edit test: %{header}"
+    questions:
+      create:
+        success: "Question was successfully created."
+      update:
+        success: "Question was successfully udated."
+      destroy: 
+        success: "Questions was successfully deleted."
+      show:
+        header: "Test: %{header}"
+        question: "Questions: %{question}"
+        answers: "Answers:"
+        actions: "Actions"
+    answers:
+      create:
+        success: "Answer was successfully created."
+      update:
+        success: "Answer was successfully udated."
+      destroy: 
+        success: "Answer was successfully deleted."
+      show:
+        header: "Question: %{header}"
+        answer: "Answer: %{answer}"
+        correct: "Correct: %{correct}"
+      new:
+        header: "New answer"
+      edit:
+        header: "Edit Answer"
+
+  new_question: "Create new question for the test: %{new_question}"
+  edit_question: "Edit the text question: %{edit_question}"
+
