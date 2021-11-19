@@ -8,7 +8,7 @@ ru:
   link_to_back: "Назад"
   link_to_add_questions: "Добавить вопрос"
   link_to_new_answer: "Новый ответ"
-  header: "Привет %{header}"
+  button_to_start: "Начать"
 
   helpers:
     submit:
@@ -31,6 +31,26 @@ ru:
       answer:
         body: "Тело ответа"
         correct: "Правильный"
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      questions_count: "Колличество вопросов"
+      actions: "Действия"
+
+  tests_users:
+    show:
+      header: "Тест: %{header}"
+      total: "Общее колличество вопросов: %{count}"
+      current: "Номер текущего вопроса: %{count}"
+      question: "Вопрос: %{question}"
+      next: "Следующий"
+    attempt:
+      header: "%{header} тест завершен!"
+      failed: "Тест провалился. Ты набрал: %{count}"
+      success: "Успешное прохождение теста. Ты набрал: %{count}"
   
   admin:
     tests:
@@ -82,6 +102,6 @@ ru:
         header: "Новый ответ"
       edit:
         header: "Редактировать ответ"
-        
+
   new_question: "Создать новый вопрос к тесту: %{new_question}"
   edit_question: "Редактировать вопрос теста: %{edit_question}"

@@ -8,6 +8,7 @@ en:
   link_to_back: "Back"
   link_to_add_questions: "Add questions"
   link_to_new_answer: "New answer"
+  button_to_start: "Start"
 
   helpers:
     submit:
@@ -30,6 +31,26 @@ en:
       answer:
         body: "Body"
         correct: "Correct"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      questions_count: "Questions count"
+      actions: "Actions"
+
+  tests_users:
+    show:
+      header: "Test: %{header}"
+      total: "Total number questions: %{count}"
+      current: "Сurrent question number: %{count}"
+      question: "Question: %{question}"
+      next: "Next"
+    attempt:
+      header: "%{header} test was completed!"
+      failed: "The test failed. You scored: %{count}"
+      success: "Successful completion of the test. You scored: %{count}"
 
   admin:
     tests:
