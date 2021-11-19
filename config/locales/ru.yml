@@ -32,6 +32,14 @@ ru:
         body: "Тело ответа"
         correct: "Правильный"
 
+  shared:
+    errors:
+      header:
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+
   tests:
     index:
       header: "Доступные Тесты"

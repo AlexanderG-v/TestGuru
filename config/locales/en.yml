@@ -32,6 +32,12 @@ en:
         body: "Body"
         correct: "Correct"
 
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
   tests:
     index:
       header: "Tricky Tests"
