@@ -113,3 +113,7 @@ ru:
 
   new_question: "Создать новый вопрос к тесту: %{new_question}"
   edit_question: "Редактировать вопрос теста: %{edit_question}"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru"

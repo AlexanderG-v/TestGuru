@@ -112,3 +112,7 @@ en:
   new_question: "Create new question for the test: %{new_question}"
   edit_question: "Edit the text question: %{edit_question}"
 
+  tests_mailer:
+    completed_test:
+      subject: "You jast completed the TestGuru test!"
+
