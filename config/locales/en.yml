@@ -1,7 +1,9 @@
 en:
   hello: "Hello world"
+  welcome: "Welcome Guru %{welcome}"
   log_in: "Log in"
   sign_up: "Sign up"
+  log_out: "Log out"
   forgot_password: "Forgot your password?"
   confirmation_instructions: "Didn't receive confirmation instructions?"
   unlock instructions: "Didn't receive unlock instructions?"
@@ -68,6 +70,8 @@ en:
       success: "Successful completion of the test. You scored: %{count}"
 
   admin:
+    nav:
+      header: "TestGuru Admin Panel"
     tests:
       create:
         success: "Test was successfully created."
@@ -125,9 +129,17 @@ en:
     completed_test:
       subject: "You jast completed the TestGuru test!"
 
+  categories:
+    biology: "Biology"
+    history: "History"
+    literature: "Literatyre"
+
   confirmation: "Currently waiting confirmation for: %(confirmation)"
   leave blank: "%{level_blank} (leave blank if you don't want to change it)"
   characters: "%{characters} characters minimum"
   confirm_changes: "%{confirm_changes} (we need your current password to confirm your changes)"
   cancel: "Cancel my account" 
   сonfirmation_nstructions: "Resend confirmation instructions"
+
+  author: "Author %{author}"
+  project: "Project %{project}"

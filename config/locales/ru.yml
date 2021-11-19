@@ -1,7 +1,9 @@
 ru:
   hello: "Привет мир"
+  welcome: "Добро пожаловать Guru %{welcome}"
   log_in: "Aвторизоваться"
   sign_up: "Зарегистрироваться"
+  log_out: "Выйти"
   forgot_password: "Забыли свой пароль?"
   confirmation_instructions: "Не получили инструкций по подтверждению?"
   unlock instructions: "Не получили инструкции по разблокировке?"
@@ -70,6 +72,8 @@ ru:
       success: "Успешное прохождение теста. Ты набрал: %{count}"
   
   admin:
+    nav:
+      header: "TestGuru Панель Администратора"
     tests:
       create:
         success: "Тест успешно создан."
@@ -133,3 +137,7 @@ ru:
   confirm_changes: "%{confirm_changes} (нам нужен ваш текущий пароль для подтверждения ваших изменений)"
   cancel: "Отменить мою учетную запись" 
   сonfirmation_nstructions: "Отправить инструкции"
+
+  author: "Автор %{author}"
+  project: "Проект %{project}"
+  
