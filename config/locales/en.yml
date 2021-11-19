@@ -1,5 +1,11 @@
 en:
   hello: "Hello world"
+  log_in: "Log in"
+  sign_up: "Sign up"
+  forgot_password: "Forgot your password?"
+  confirmation_instructions: "Didn't receive confirmation instructions?"
+  unlock instructions: "Didn't receive unlock instructions?"
+  sign_in_with: "Sign in with"
   link_to_new_test: "New test"
   link_to_show: "Show"
   link_to_edit: "Edit"
@@ -9,6 +15,9 @@ en:
   link_to_add_questions: "Add questions"
   link_to_new_answer: "New answer"
   button_to_start: "Start"
+  sign_up: "Sign up"
+  update: "Update"
+  enter: "Enter"
 
   helpers:
     submit:
@@ -116,3 +125,9 @@ en:
     completed_test:
       subject: "You jast completed the TestGuru test!"
 
+  confirmation: "Currently waiting confirmation for: %(confirmation)"
+  leave blank: "%{level_blank} (leave blank if you don't want to change it)"
+  characters: "%{characters} characters minimum"
+  confirm_changes: "%{confirm_changes} (we need your current password to confirm your changes)"
+  cancel: "Cancel my account" 
+  сonfirmation_nstructions: "Resend confirmation instructions"

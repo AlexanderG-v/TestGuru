@@ -20,7 +20,7 @@ en:
         first_name: "First name"
         last_name: "Last name"
         type: "Type"
-        encrypted_password: "Password"
+        password: "Password"
       answer:
         body: "Body"
         correct: "Correct"

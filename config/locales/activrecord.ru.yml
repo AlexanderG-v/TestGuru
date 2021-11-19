@@ -20,7 +20,8 @@ ru:
         first_name: "Имя"
         last_name: "Фамилия"
         type: "Тип"
-        encrypted_password: "Пароль"
+        password: "Пароль"
+        password_confirmation: "Повторить пороль"
 
       answer:
         body: "Тело ответа"

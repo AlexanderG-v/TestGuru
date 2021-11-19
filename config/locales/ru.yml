@@ -1,5 +1,11 @@
 ru:
   hello: "Привет мир"
+  log_in: "Aвторизоваться"
+  sign_up: "Зарегистрироваться"
+  forgot_password: "Забыли свой пароль?"
+  confirmation_instructions: "Не получили инструкций по подтверждению?"
+  unlock instructions: "Не получили инструкции по разблокировке?"
+  sign_in_with: "Войти в систему с помощью %{resource}" 
   link_to_new_test: "Новый тест"
   link_to_show: "Смотреть"
   link_to_edit: "Редактировать"
@@ -9,6 +15,9 @@ ru:
   link_to_add_questions: "Добавить вопрос"
   link_to_new_answer: "Новый ответ"
   button_to_start: "Начать"
+  update: "Обновить"
+  enter: "Вход"
+  remember_me: "Запомнить меня"
 
   helpers:
     submit:
@@ -117,3 +126,10 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru"
+
+  confirmation: "В настоящее время ожидает подтверждения для: %(confirmation)"
+  leave_blank: "%{level_blank} (оставьте поле пустым, если вы не хотите его менять)"
+  characters: "%{characters} минимум символов"
+  confirm_changes: "%{confirm_changes} (нам нужен ваш текущий пароль для подтверждения ваших изменений)"
+  cancel: "Отменить мою учетную запись" 
+  сonfirmation_nstructions: "Отправить инструкции"
