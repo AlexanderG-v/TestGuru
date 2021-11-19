@@ -2,6 +2,12 @@ ru:
   activerecord:
     models:
       test: "Тест"
+      admin: "Администратор"
+      user: "Пользователь"
+      answer: "Ответ"
+      category: "Категория"
+      question: "Вопрос"
+      tests_user: "Тесты - Пользователь"
 
     attributes:
       test:
@@ -9,10 +15,31 @@ ru:
         author: "Автор"
         category: "Категория"
         level: "Уровень"
+      user:
+        email: "Эл. почта"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        type: "Тип"
+        encrypted_password: "Пароль"
+
+      answer:
+        body: "Тело ответа"
+        correct: "Правильный"
+        question: "Вопрос"
+      category:
+        title: "Название"
+      question:
+        body: "Тело вопроса"
+        test: "Тест"
+      tests_user:
+        user: "Пользователь"
+        test: "Тест"
+        result: "Результат"
+        current_question: "Текущий вопрос"
 
     errors:
       messages:
         blank: "не может быть пустым"
-        required: "должен существовать"
+        required: "не может не существовать"
         greater_than: "должен быть больше чем %{count}"
         taken: "уже занято"
