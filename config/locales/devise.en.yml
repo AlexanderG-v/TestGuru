@@ -59,6 +59,10 @@ en:
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
   errors:
     messages:
+      blank: "can't be blank"
+      required: "must exist"
+      greater_than: "must be greater than %{count}"
+      taken: "has already been taken"
       already_confirmed: "was already confirmed, please try signing in"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
       expired: "has expired, please request a new one"

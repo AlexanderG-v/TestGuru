@@ -37,10 +37,3 @@ ru:
         test: "Тест"
         result: "Результат"
         current_question: "Текущий вопрос"
-
-    errors:
-      messages:
-        blank: "не может быть пустым"
-        required: "не может не существовать"
-        greater_than: "должен быть больше чем %{count}"
-        taken: "уже занято"

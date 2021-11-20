@@ -20,6 +20,7 @@ en:
   sign_up: "Sign up"
   update: "Update"
   enter: "Enter"
+  link_to_thinknetika: "Educational project at the online school Thinknetica"
 
   helpers:
     submit:
@@ -48,6 +49,10 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    footer:
+      header: "Footer:"
+      current_year: "Current year: %{count}"
+      description: "This application is designed to create, manage and run tests in any subject area!"
 
   tests:
     index:
