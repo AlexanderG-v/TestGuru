@@ -1,8 +1,10 @@
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <%= link_to 'Test Guru', root_path, class: 'navbar-brand' %>
-
   <span class="navbar-text">
-    <% if user_signed_in? %>
+    <% if current_user.is_a?(Admin) %>
+      <b><%= t('welcome', welcome: current_user.first_name) %></b> |
+      <%= link_to t('admin_panel'), admin_tests_path %>
+    <% elsif user_signed_in? %>
       <b><%= t('welcome', welcome: current_user.first_name) %></b> |
       <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
     <% else %>

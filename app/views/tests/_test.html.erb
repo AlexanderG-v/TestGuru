@@ -1,7 +1,8 @@
 <div class="container mt-1">
   <div class="row text-center">
-  <div class=col-6><%= test.title %></div>
-  <div class=col><%= test.level %></div>
-  <div class=col><%= test.questions.count %></div>
-  <div class=col><%= button_to t('button_to_start'), start_test_path(test), class: 'btn btn-outline-secondary btn-sm' %></div>
+    <div class=col-6><%= test.title %></div>
+    <div class=col><%= test.level %></div>
+    <div class=col><%= test.questions.count %></div>
+    <div class=col><%= button_to t('button_to_start'), start_test_path(test), class: 'btn btn-outline-secondary btn-sm' %></div>
+  </div>
 </div>
