@@ -3,7 +3,8 @@
   <span class="navbar-text">
     <% if current_user.is_a?(Admin) %>
       <b><%= t('welcome', welcome: current_user.first_name) %></b> |
-      <%= link_to t('admin_panel'), admin_tests_path %>
+      <%= link_to t('admin_panel'), admin_tests_path %> |
+      <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
     <% elsif user_signed_in? %>
       <b><%= t('welcome', welcome: current_user.first_name) %></b> |
       <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
