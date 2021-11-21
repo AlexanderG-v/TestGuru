@@ -77,7 +77,7 @@ en:
 
   admin:
     nav:
-      header: "TestGuru Admin Panel"
+      header: "Admin Panel"
     tests:
       create:
         success: "Test was successfully created."
