@@ -3,13 +3,8 @@
 
 <% if user_signed_in? %>
   <p class="nav user">
-    Welcome, <b><%= current_user.first_name %></b> Guru
-  <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+    <b><%= t('welcome', welcome: current_user.first_name) %></b>
+  <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
   </p>
 <% else %>
-  <tr>
-    <th colspan="2"></th>
-    <td><%= link_to 'signup', new_user_registration_path %></td>
-    <td><%= link_to 'login', user_session_path %></td>
-  </tr>
 <% end %>

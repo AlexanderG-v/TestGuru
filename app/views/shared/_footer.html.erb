@@ -1,9 +1,9 @@
-<h5>Footer:</h5>
+<h5><%= t('.header') %></h5>
 
 <footer>
-  <p>current year: <%= current_year %></p>
+  <p><%= t('.current_year', count: current_year) %></p>
   <p><%= github_url('AlexanderG-v', 'TestGuru') %></p>
-  <p>Данное приложение предназначено для создания, управления и выполнения тестов в любой предметной области!</p>
+  <p><%= t('.description') %></p>
   <p><%= github_url('AlexanderG-v') %></p>
-  <p><%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com/',target: '_blank' %></p>
+  <p><%= link_to t('link_to_thinknetika'), 'https://thinknetica.com/',target: '_blank' %></p>
 </footer>

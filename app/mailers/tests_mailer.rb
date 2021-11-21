@@ -3,6 +3,6 @@ class TestsMailer < ApplicationMailer
     @user = tests_user.user
     @test = tests_user.test
 
-    mail to: @user.email, subject: 'You jast completed the TestGuru!'
+    mail to: @user.email
   end
 end

@@ -1,15 +1,15 @@
-<h1><%= @tests_user.test.title %></h1>
+<h1><%= t('.header', header: @tests_user.test.title) %></h1>
 
 <b>
-  Total number of questions: <%= @tests_user.test.questions.count %>
+  <%= t('.total', count: @tests_user.test.questions.count) %>
 </b><br>
 
 <b>
-  Сurrent question number: <%= @tests_user.current_question_number %>
+  <%= t('.current', count: @tests_user.current_question_number)%>
 </b><br>
 
 <b>
-  <%= @tests_user.current_question.body %>
+  <%= t('.question', question: @tests_user.current_question.body) %>
 </b>
 
 <%= form_with url: tests_user_path(@tests_user), local: true, method: :put do |form| %>
@@ -21,5 +21,5 @@
     </p>
   <% end %>
 
-  <p><%= form.submit 'Next' %></p>
+  <p><%= form.submit t('.next')%></p>
 <% end %>

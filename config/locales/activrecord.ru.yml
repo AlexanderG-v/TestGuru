@@ -1,0 +1,39 @@
+ru:
+  activerecord:
+    models:
+      test: "Тест"
+      admin: "Администратор"
+      user: "Пользователь"
+      answer: "Ответ"
+      category: "Категория"
+      question: "Вопрос"
+      tests_user: "Тесты - Пользователь"
+
+    attributes:
+      test:
+        title: "Название"
+        author: "Автор"
+        category: "Категория"
+        level: "Уровень"
+      user:
+        email: "Эл. почта"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        type: "Тип"
+        password: "Пароль"
+        password_confirmation: "Повторить пороль"
+
+      answer:
+        body: "Тело ответа"
+        correct: "Правильный"
+        question: "Вопрос"
+      category:
+        title: "Название"
+      question:
+        body: "Тело вопроса"
+        test: "Тест"
+      tests_user:
+        user: "Пользователь"
+        test: "Тест"
+        result: "Результат"
+        current_question: "Текущий вопрос"

@@ -1,9 +1,9 @@
-<h1><%= @tests_user.test.title %> test was completed!</h1>
+<h1><%= t('.header', header: @tests_user.test.title) %></h1>
 
 <% if @tests_user.rate? %>
-  <p>Successful completion of the test. You scored: <b style="color: #008000"> <%= @tests_user.success_rate %>%</b></p> 
+  <p><b style="color: #008000"> <%= t('.success', count: @tests_user.success_rate) %>%</b></p> 
 <% else %>
-  <p>The test failed. You scored: <b style="color: #FF0000"> <%= @tests_user.success_rate %>%</b></p> 
+  <p><b style="color: #FF0000"> <%= t('.failed', count: @tests_user.success_rate) %>%</b></p> 
 <% end %>
 
-<%= link_to 'Back', tests_path %>
+<%= link_to t('link_to_back'), tests_path %>

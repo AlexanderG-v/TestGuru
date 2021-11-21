@@ -1,3 +1,148 @@
-
 ru:
   hello: "Привет мир"
+  welcome: "Добро пожаловать Guru %{welcome}"
+  log_in: "Aвторизоваться"
+  sign_up: "Зарегистрироваться"
+  log_out: "Выйти"
+  forgot_password: "Забыли свой пароль?"
+  confirmation_instructions: "Не получили инструкций по подтверждению?"
+  unlock instructions: "Не получили инструкции по разблокировке?"
+  sign_in_with: "Войти в систему с помощью %{resource}" 
+  link_to_new_test: "Новый тест"
+  link_to_show: "Смотреть"
+  link_to_edit: "Редактировать"
+  link_to_delete: "Удалить"
+  confirm: "Вы уверены?"
+  link_to_back: "Назад"
+  link_to_add_questions: "Добавить вопрос"
+  link_to_new_answer: "Новый ответ"
+  button_to_start: "Начать"
+  update: "Обновить"
+  enter: "Вход"
+  remember_me: "Запомнить меня"
+  link_to_thinknetika: "Учебный проект в онлайн-школе Thinknetica"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+      question:
+        create: "Создать Вопрос"
+        update: "Обновить Вопрос"
+      answer:
+        create: "Создать Ответ"
+        update: "Обновить Ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        body: "Тело вопроса"
+      answer:
+        body: "Тело ответа"
+        correct: "Правильный"
+
+  shared:
+    errors:
+      header:
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+    footer:
+      header: "Нижний колонтитул:"
+      current_year: "Текущий год: %{count}"
+      description: "Данное приложение предназначено для создания, управления и выполнения тестов в любой предметной области!"
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      questions_count: "Колличество вопросов"
+      actions: "Действия"
+
+  tests_users:
+    show:
+      header: "Тест: %{header}"
+      total: "Общее колличество вопросов: %{count}"
+      current: "Номер текущего вопроса: %{count}"
+      question: "Вопрос: %{question}"
+      next: "Следующий"
+    attempt:
+      header: "%{header} тест завершен!"
+      failed: "Тест провалился. Ты набрал: %{count}"
+      success: "Успешное прохождение теста. Ты набрал: %{count}"
+  
+  admin:
+    nav:
+      header: "TestGuru Панель Администратора"
+    tests:
+      create:
+        success: "Тест успешно создан."
+      update:
+        success: "Тест успешно обновлен."
+      destroy: 
+        success: "Тест успешно удален."
+      index:
+        header: "Доступные Тесты"
+        title: "Название"
+        level: "Уровень"
+        questions_count: "Колличество вопросов"
+        actions: "Действия"
+      new:
+        header: "Создать новый тест"
+      show:
+        title: "Название: %{title}"
+        level: "Уровень: %{level}"
+        questions: "Вопросы:"
+        actions: "Действия"
+      edit:
+        header: "Редактировать тест: %{header}"
+    questions:
+      create:
+        success: "Вопрос успешно создан."
+      update:
+        success: "Вопрос успешно обновлен."
+      destroy: 
+        success: "Вопрос успешно удален."
+      show:
+        header: "Тест: %{header}"
+        question: "Вопрос: %{question}"
+        answers: "Ответы:"
+        actions: "Действия"
+    answers:
+      create:
+        success: "Ответ успешно создан."
+      update:
+        success: "Ответ успешно обновлен."
+      destroy: 
+        success: "Ответ успешно удален."
+      show:
+        header: "Вопрос: %{header}"
+        answer: "Ответ: %{answer}"
+        correct: "Правильный: %{correct}"
+      new:
+        header: "Новый ответ"
+      edit:
+        header: "Редактировать ответ"
+
+  new_question: "Создать новый вопрос к тесту: %{new_question}"
+  edit_question: "Редактировать вопрос теста: %{edit_question}"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru"
+
+  confirmation: "В настоящее время ожидает подтверждения для: %(confirmation)"
+  leave_blank: "%{level_blank} (оставьте поле пустым, если вы не хотите его менять)"
+  characters: "%{characters} минимум символов"
+  confirm_changes: "%{confirm_changes} (нам нужен ваш текущий пароль для подтверждения ваших изменений)"
+  cancel: "Отменить мою учетную запись" 
+  сonfirmation_nstructions: "Отправить инструкции"
+
+  author: "Автор %{author}"
+  project: "Проект %{project}"
+ 
