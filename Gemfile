@@ -25,11 +25,16 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-#AUTH
+# AUTH
 gem 'devise', '~> 4.0'
 
-#LOCALIZATION
+# LOCALIZATION
 gem 'rails-i18n', '~> 6.0.0'
+
+# UI
+gem 'jquery-rails'
+gem 'bootstrap', '~> 5.0.1'
+gem 'mini_racer', platforms: :ruby
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

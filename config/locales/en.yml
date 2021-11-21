@@ -20,6 +20,7 @@ en:
   sign_up: "Sign up"
   update: "Update"
   enter: "Enter"
+  remember_me: "Remember me"
   link_to_thinknetika: "Educational project at the online school Thinknetica"
 
   helpers:

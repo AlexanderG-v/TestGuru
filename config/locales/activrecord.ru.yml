@@ -16,7 +16,7 @@ ru:
         category: "Категория"
         level: "Уровень"
       user:
-        email: "Эл. почта"
+        email: "Эл. адрес"
         first_name: "Имя"
         last_name: "Фамилия"
         type: "Тип"
