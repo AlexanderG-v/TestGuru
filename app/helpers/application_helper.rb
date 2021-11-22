@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+
+  CONTEXTUAL_ALERT_CSS_CLASS = { notice: 'alert alert-info', alert: 'alert alert-danger' }
+
   def current_year
     Date.current.year
   end
@@ -11,9 +14,6 @@ module ApplicationHelper
   end
 
   def flash_class(key)
-    case key
-    when 'notice' then 'alert alert-info'
-    when 'alert' then 'alert alert-danger'
-    end
+    CONTEXTUAL_ALERT_CSS_CLASS[key.to_sym]
   end
 end
