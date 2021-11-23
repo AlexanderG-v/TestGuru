@@ -147,6 +147,7 @@ ru:
   confirm_changes: "%{confirm_changes} (нам нужен ваш текущий пароль для подтверждения ваших изменений)"
   cancel: "Отменить мою учетную запись" 
   сonfirmation_nstructions: "Отправить инструкции"
+  description_gits: "Вопрос о %{title} от TestGuru"
 
   author: "Автор %{author}"
   project: "Проект %{project}"

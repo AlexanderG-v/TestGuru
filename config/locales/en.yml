@@ -151,6 +151,7 @@ en:
   confirm_changes: "%{confirm_changes} (we need your current password to confirm your changes)"
   cancel: "Cancel my account" 
   сonfirmation_nstructions: "Resend confirmation instructions"
+  description_gits: "A question about %{title} from TestGuru"
 
   author: "Author %{author}"
   project: "Project %{project}"
