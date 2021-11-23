@@ -4,6 +4,7 @@ ru:
   log_in: "Aвторизоваться"
   sign_up: "Зарегистрироваться"
   log_out: "Выйти"
+  admin_panel: "AП"
   forgot_password: "Забыли свой пароль?"
   confirmation_instructions: "Не получили инструкций по подтверждению?"
   unlock instructions: "Не получили инструкции по разблокировке?"
@@ -78,7 +79,7 @@ ru:
   
   admin:
     nav:
-      header: "TestGuru Панель Администратора"
+      header: "Панель Администратора"
     tests:
       create:
         success: "Тест успешно создан."

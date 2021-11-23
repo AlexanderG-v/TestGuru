@@ -4,6 +4,7 @@ en:
   log_in: "Log in"
   sign_up: "Sign up"
   log_out: "Log out"
+  admin_panel: "AP"
   forgot_password: "Forgot your password?"
   confirmation_instructions: "Didn't receive confirmation instructions?"
   unlock instructions: "Didn't receive unlock instructions?"
@@ -20,6 +21,7 @@ en:
   sign_up: "Sign up"
   update: "Update"
   enter: "Enter"
+  remember_me: "Remember me"
   link_to_thinknetika: "Educational project at the online school Thinknetica"
 
   helpers:
@@ -76,7 +78,7 @@ en:
 
   admin:
     nav:
-      header: "TestGuru Admin Panel"
+      header: "Admin Panel"
     tests:
       create:
         success: "Test was successfully created."

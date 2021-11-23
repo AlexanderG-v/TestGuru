@@ -1,12 +1,13 @@
-<h1><%= t('.header') %></h1>
-
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.questions_count') %></th>
-    <th><%= t('.actions') %></th> 
-  </tr>
-
-<%= render @tests %>
-</table>
+<div class="row text-center mt-3">
+  <div class="col col-md-12">
+    <h1><%= t('.header') %></h1>
+  </div>
+</div>
+<div class="container mt-3">
+  <div class="row ustify-content-md-center text-center" style="background-color: #e3f2fd;">
+    <div class="col-md-6"><%= t('.title') %></div>
+    <div class=col-md><%= t('.level') %></div>
+    <div class=col-md><%= t('.questions_count') %></div>
+    <div class=col-md><%= t('.actions') %></div>
+  </div>
+  <%= render @tests %>

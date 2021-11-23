@@ -1,6 +1,8 @@
-<tr>
-  <td><%= test.title %></td>
-  <td><%= test.level %></td>
-  <td><%= test.questions.count %></td>
-  <td><%= button_to t('button_to_start'), start_test_path(test) %></td>
-</tr>
+<div class="container mt-1">
+  <div class="row ustify-content-md-center text-center">
+    <div class=col-md-6><%= test.title %></div>
+    <div class=col-md><%= test.level %></div>
+    <div class=col-md><%= test.questions.count %></div>
+    <div class=col-md><%= button_to t('button_to_start'), start_test_path(test), class: 'btn btn-outline-secondary btn-sm' %></div>
+  </div>
+</div>
