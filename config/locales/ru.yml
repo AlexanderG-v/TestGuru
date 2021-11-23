@@ -22,6 +22,7 @@ ru:
   enter: "Вход"
   remember_me: "Запомнить меня"
   link_to_thinknetika: "Учебный проект в онлайн-школе Thinknetica"
+  link_to_gist_question: "Gist Вопрос"
 
   helpers:
     submit:
@@ -76,6 +77,9 @@ ru:
       header: "%{header} тест завершен!"
       failed: "Тест провалился. Ты набрал: %{count}"
       success: "Успешное прохождение теста. Ты набрал: %{count}"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка."
   
   admin:
     nav:

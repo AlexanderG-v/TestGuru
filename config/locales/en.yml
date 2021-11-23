@@ -23,6 +23,7 @@ en:
   enter: "Enter"
   remember_me: "Remember me"
   link_to_thinknetika: "Educational project at the online school Thinknetica"
+  link_to_gist_question: "Gist Question"
 
   helpers:
     submit:
@@ -75,6 +76,9 @@ en:
       header: "%{header} test was completed!"
       failed: "The test failed. You scored: %{count}"
       success: "Successful completion of the test. You scored: %{count}"
+    gist:
+      success: "Gist was soccessfully created!"
+      failure: "An error occurred while saving gist."
 
   admin:
     nav:
