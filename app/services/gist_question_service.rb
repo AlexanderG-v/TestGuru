@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+ResultObject = Struct.new(:success?, :html_url)
 class GistQuestionService
   def initialize(question, client: nil)
     @question = question
@@ -8,7 +9,8 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    response = @client.create_gist(gist_params)
+    ResultObject.new(response.html_url.present?, response.html_url)
   end
 
   private
