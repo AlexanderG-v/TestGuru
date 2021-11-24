@@ -5,6 +5,7 @@
   </div>
   <span class="navbar-text">
     <b><%= t('welcome', welcome: current_user.first_name) %></b> |
+    <%= link_to t('admin_gists'), admin_gists_path %> |
     <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
   </span>
 </nav>

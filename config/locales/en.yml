@@ -24,6 +24,7 @@ en:
   remember_me: "Remember me"
   link_to_thinknetika: "Educational project at the online school Thinknetica"
   link_to_gist_question: "Gist Question"
+  admin_gists: "Gists"
 
   helpers:
     submit:
@@ -132,6 +133,12 @@ en:
         header: "New answer"
       edit:
         header: "Edit Answer"
+    gits:
+      index:
+        header: "Сreated Gists"
+        questions: "Question"
+        gist_url: "Link"
+        user_email: "User's email"
 
   new_question: "Create new question for the test: %{new_question}"
   edit_question: "Edit the text question: %{edit_question}"
