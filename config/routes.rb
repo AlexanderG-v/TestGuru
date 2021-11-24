@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   end
 
   resources :tests_users, only: %i[show update] do
+    resources :gists, only: :create
     member do
       get :attempt
-      post :gist
     end
   end
 

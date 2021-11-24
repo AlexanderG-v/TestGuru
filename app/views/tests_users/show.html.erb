@@ -21,6 +21,6 @@
     </p>
   <% end %>
 
-  <p><%= link_to t('link_to_gist_question'), gist_tests_user_path(@tests_user), method: :post %></p>
+  <p><%= link_to t('link_to_gist_question'), tests_user_gists_path(@tests_user), method: :post %></p>
   <p><%= form.submit t('.next')%></p>
 <% end %>

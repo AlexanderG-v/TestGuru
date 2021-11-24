@@ -8,19 +8,6 @@ class TestsUsersController < ApplicationController
 
   def attempt; end
 
-  def gist
-    result = GistQuestionService.new(@tests_user.current_question).call
-
-    if result.success?
-      Gist.create(gist_url: result.html_url, user: current_user, question: @tests_user.current_question)
-      flash[:notice] = view_context.link_to(result.html_url, t('.success'))
-    else
-      flash[:alert] = t('.failure')
-    end
-
-    redirect_to @tests_user
-  end
-
   def update
     @tests_user.accept!(params[:answer_ids])
 

@@ -78,7 +78,9 @@ ru:
       header: "%{header} тест завершен!"
       failed: "Тест провалился. Ты набрал: %{count}"
       success: "Успешное прохождение теста. Ты набрал: %{count}"
-    gist:
+    
+  gists:
+    create:
       success: "Gist успешно сохранен!"
       failure: "Во время сохранения gist произошла ошибка."
   
