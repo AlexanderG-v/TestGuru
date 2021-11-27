@@ -22,6 +22,8 @@ ru:
   enter: "Вход"
   remember_me: "Запомнить меня"
   link_to_thinknetika: "Учебный проект в онлайн-школе Thinknetica"
+  link_to_gist_question: "Gist Вопрос"
+  admin_gists: "Gists"
 
   helpers:
     submit:
@@ -76,6 +78,11 @@ ru:
       header: "%{header} тест завершен!"
       failed: "Тест провалился. Ты набрал: %{count}"
       success: "Успешное прохождение теста. Ты набрал: %{count}"
+    
+  gists:
+    create:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка."
   
   admin:
     nav:
@@ -129,6 +136,12 @@ ru:
         header: "Новый ответ"
       edit:
         header: "Редактировать ответ"
+    gists:
+      index:
+        header: "Созданные Gists"
+        questions: "Вопрос"
+        gist_url: "Ссылка"
+        user_email: "Эл. адрес пользователя"
 
   new_question: "Создать новый вопрос к тесту: %{new_question}"
   edit_question: "Редактировать вопрос теста: %{edit_question}"
@@ -143,6 +156,7 @@ ru:
   confirm_changes: "%{confirm_changes} (нам нужен ваш текущий пароль для подтверждения ваших изменений)"
   cancel: "Отменить мою учетную запись" 
   сonfirmation_nstructions: "Отправить инструкции"
+  description_gits: "Вопрос о %{title} от TestGuru"
 
   author: "Автор %{author}"
   project: "Проект %{project}"

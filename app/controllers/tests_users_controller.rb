@@ -1,7 +1,8 @@
-class TestsUsersController < ApplicationController
+# frozen_string_literal: true
 
+class TestsUsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_tests_user, only: %i[show attempt update]
+  before_action :set_tests_user, only: %i[show attempt update gist]
 
   def show; end
 
@@ -23,5 +24,4 @@ class TestsUsersController < ApplicationController
   def set_tests_user
     @tests_user = TestsUser.find(params[:id])
   end
-
 end
