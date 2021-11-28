@@ -3,12 +3,18 @@
     <h1><%= t('.header') %></h1>
   </div>
 </div>
-<div class="container mt-3">
-  <div class="row ustify-content-md-center text-center" style="background-color: #e3f2fd;">
-    <div class="col-md-6"><%= t('.title') %></div>
-    <div class=col-md><%= t('.level') %></div>
-    <div class=col-md><%= t('.questions_count') %></div>
-    <div class=col-md><%= t('.actions') %></div>
-  </div>
-</div>
-<%= render @tests %>
+
+<table class="table container mt-3">
+  <tr class="row ustify-content-md-center text-center" style="background-color: #e3f2fd;">
+    <th class="sort-by-title pointer col-md-6">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+    <th class=col-md><%= t('.level') %></th>
+    <th class=col-md><%= t('.questions_count') %></th>
+    <th class=col-md><%= t('.actions') %></th>
+  </tr> 
+  <%= render @tests %>
+</table>
+
