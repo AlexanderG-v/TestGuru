@@ -1,0 +1,8 @@
+<%= content_tag :div, 
+                class: 'progress', 
+                data: { current_number: @tests_user.current_question_number,
+                        total_questions: @tests_user.total_questions } do %>
+  
+  <%= content_tag :div, class: 'progress-bar bg-info' do %>
+  <% end %>
+<% end %>
