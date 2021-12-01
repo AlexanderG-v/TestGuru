@@ -9,7 +9,9 @@
   <td class="align-middle">
     <%= link_to t('link_to_edit'), 
                 edit_admin_test_path(test),
-                data: { test_id: test.id },
+                data: { test_id: test.id,
+                      locale_edit: t('link_to_edit'),
+                      locale_cancel: t('link_to_cancel')},
                 class: 'form-inline-link' %> |
   </td>
   <td class="align-middle">
