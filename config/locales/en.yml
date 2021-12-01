@@ -12,6 +12,7 @@ en:
   link_to_new_test: "New test"
   link_to_show: "Show"
   link_to_edit: "Edit"
+  link_to_cancel: 'Cancel'
   link_to_delete: "Delete"
   confirm: "Are you sure?"
   link_to_back: "Back"
@@ -87,6 +88,8 @@ en:
     nav:
       header: "Admin Panel"
     tests:
+      form_inline:
+        submit: "OK"
       create:
         success: "Test was successfully created."
       update:

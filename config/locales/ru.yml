@@ -12,6 +12,7 @@ ru:
   link_to_new_test: "Новый тест"
   link_to_show: "Смотреть"
   link_to_edit: "Редактировать"
+  link_to_cancel: 'Отмена'
   link_to_delete: "Удалить"
   confirm: "Вы уверены?"
   link_to_back: "Назад"
@@ -88,6 +89,8 @@ ru:
     nav:
       header: "Панель Администратора"
     tests:
+      form_inline:
+        submit: "OK"
       create:
         success: "Тест успешно создан."
       update:
