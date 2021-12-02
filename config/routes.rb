@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :gists, only: :index
+    resources :gists, only: %i[index destroy]
     resources :tests do
       patch :update_inline, on: :member
 

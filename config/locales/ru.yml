@@ -145,6 +145,8 @@ ru:
         questions: "Вопрос"
         gist_url: "Ссылка"
         user_email: "Эл. адрес пользователя"
+      destroy: 
+        success: "Gist успешно удален."
 
   new_question: "Создать новый вопрос к тесту: %{new_question}"
   edit_question: "Редактировать вопрос теста: %{edit_question}"

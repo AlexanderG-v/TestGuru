@@ -144,6 +144,8 @@ en:
         questions: "Question"
         gist_url: "Link"
         user_email: "User's email"
+      destroy: 
+        success: "Gist was successfully deleted."
 
   new_question: "Create new question for the test: %{new_question}"
   edit_question: "Edit the text question: %{edit_question}"

@@ -1,7 +1,11 @@
 <div class="container mt-1">
   <div class="row ustify-content-md-center text-center">
-    <div class=col-md-6><%= link_to gist.question.body.truncate(25), admin_question_path(gist.question)  %></div>
+    <div class=col-md-6><%= link_to gist.question.body.truncate(25), admin_question_path(gist.question) %></div>
     <div class=col-md><%= link_to gist.user, gist.gist_url, target: :_blank %></div>
     <div class=col-md><%= gist.user.email %></div>
+    <div class=col-md><%= link_to t('link_to_delete'), admin_gist_path(gist),
+                          method: :delete,
+                          data: { confirm: t('confirm') } %>
+    </div>
   </div>
 </div>
