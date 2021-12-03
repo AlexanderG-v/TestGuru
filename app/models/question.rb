@@ -5,6 +5,7 @@ class Question < ApplicationRecord
 
   has_many :answers, dependent: :destroy
   has_many :gists, dependent: :destroy
+  has_many :tests_users, dependent: :nullify, foreign_key: 'current_question_id'
 
   validates :body, presence: true
 end
