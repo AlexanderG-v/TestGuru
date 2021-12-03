@@ -4,6 +4,8 @@
   <%= link_to t('link_to_new_test'), new_admin_test_path(@test) %>
 </p>
 
+<%= render 'shared/errors', resource: @test %>
+
 <table class="table">
   <tr>
     <th class="sort-by-title pointer">

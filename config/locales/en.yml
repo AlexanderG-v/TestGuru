@@ -12,6 +12,7 @@ en:
   link_to_new_test: "New test"
   link_to_show: "Show"
   link_to_edit: "Edit"
+  link_to_cancel: 'Cancel'
   link_to_delete: "Delete"
   confirm: "Are you sure?"
   link_to_back: "Back"
@@ -87,6 +88,8 @@ en:
     nav:
       header: "Admin Panel"
     tests:
+      form_inline:
+        submit: "OK"
       create:
         success: "Test was successfully created."
       update:
@@ -141,6 +144,8 @@ en:
         questions: "Question"
         gist_url: "Link"
         user_email: "User's email"
+      destroy: 
+        success: "Gist was successfully deleted."
 
   new_question: "Create new question for the test: %{new_question}"
   edit_question: "Edit the text question: %{edit_question}"

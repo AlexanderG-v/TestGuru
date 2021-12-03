@@ -30,6 +30,10 @@ class TestsUser < ApplicationRecord
     save!
   end
 
+  def total_questions
+    test.questions.count
+  end
+
   private
 
   def before_validation_set_current_question
