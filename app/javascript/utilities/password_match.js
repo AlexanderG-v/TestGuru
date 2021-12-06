@@ -1,15 +1,15 @@
 document.addEventListener("turbolinks:load", () => {
-  const password2 = document.querySelectorAll("user_password_confirmation");
+  const password2 = document.getElementById("user_password_confirmation");
   if (password2) {
     document
-      .querySelector("#new_user")
+      .getElementById("new_user")
       .addEventListener("input", passwordConfirmation);
   }
 });
 
 const passwordConfirmation = () => {
-  const password1 = document.querySelector("#user_password");
-  const password2 = document.querySelector("#user_password_confirmation");
+  const password1 = document.getElementById("user_password");
+  const password2 = document.getElementById("user_password_confirmation");
   if (!password2.value) {
     password2.parentNode
       .querySelector(".octicon-thumbsdown")

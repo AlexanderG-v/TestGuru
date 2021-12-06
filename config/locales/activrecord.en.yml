@@ -35,3 +35,6 @@ en:
         test: "Test"
         result: "Result"
         current_question: "Current question"
+
+      feedback:
+        message: "Message"

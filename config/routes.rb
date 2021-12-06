@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    resources :feedbacks, only: %i[new create]
+  end
+
   resources :tests_users, only: %i[show update] do
     resources :gists, only: :create
     member do

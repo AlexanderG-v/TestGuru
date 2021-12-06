@@ -14,6 +14,7 @@ ru:
   link_to_edit: "Редактировать"
   link_to_cancel: 'Отмена'
   link_to_delete: "Удалить"
+  link_to_send: "Отправить"
   confirm: "Вы уверены?"
   link_to_back: "Назад"
   link_to_add_questions: "Добавить вопрос"
@@ -25,6 +26,7 @@ ru:
   link_to_thinknetika: "Учебный проект в онлайн-школе Thinknetica"
   link_to_gist_question: "Gist Вопрос"
   admin_gists: "Gists"
+  feedback: "Написать нам"
 
   helpers:
     submit:
@@ -51,7 +53,7 @@ ru:
   shared:
     errors:
       header:
-        one: "Обнаружено %{count} ошибка"
+        one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
         few: "Обнаружено %{count} ошибки"
         many: "Обнаружено %{count} ошибок"
@@ -147,10 +149,19 @@ ru:
         user_email: "Эл. адрес пользователя"
       destroy: 
         success: "Gist успешно удален."
+  feedbacks:
+    new:
+      header: "%{header}, хотите подилиться своим мнением?"
+      placeholder: "Текст сообщения"
+    create:
+      success: "Сообщение отправлено!"
 
   new_question: "Создать новый вопрос к тесту: %{new_question}"
   edit_question: "Редактировать вопрос теста: %{edit_question}"
 
+  feedbacks_mailer:
+    send_feedback:
+      subject: "Отзыв от %{subject}"
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru"

@@ -37,3 +37,6 @@ ru:
         test: "Тест"
         result: "Результат"
         current_question: "Текущий вопрос"
+      
+      feedback:
+        message: "Сообщение"

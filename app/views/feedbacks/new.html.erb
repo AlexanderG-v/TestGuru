@@ -1,0 +1,17 @@
+<div class="row text-center mt-3">
+  <div class="col col-md-12">
+    <h1><%= t('.header', header: @current_user.first_name) %></h1>
+  </div>
+</div>
+
+<div class="card-body">
+  <%= form_with model: [@user, @feedback] do |form| %>
+    <%= render 'shared/errors', resource: @feedback %>
+    <div class="fform-floating">
+      <%= form.text_area :message, class: 'form-control', placeholder: t('.placeholder'), id: 'floatingTextarea2', style: 'height: 100px' %>
+    </div>
+    <div class="d-grid justify-content-md-end" >
+      <%= form.submit t('link_to_send'), class: 'btn btn-outline-secondary btn-sm mt-2'  %>
+    </div>
+  <% end %>
+</div>

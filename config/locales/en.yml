@@ -14,6 +14,7 @@ en:
   link_to_edit: "Edit"
   link_to_cancel: 'Cancel'
   link_to_delete: "Delete"
+  link_to_send: "Send"
   confirm: "Are you sure?"
   link_to_back: "Back"
   link_to_add_questions: "Add questions"
@@ -26,6 +27,7 @@ en:
   link_to_thinknetika: "Educational project at the online school Thinknetica"
   link_to_gist_question: "Gist Question"
   admin_gists: "Gists"
+  feedback: "Feedback"
 
   helpers:
     submit:
@@ -147,9 +149,19 @@ en:
       destroy: 
         success: "Gist was successfully deleted."
 
+  feedbacks:
+    new:
+      header: "%{header}, do you want to share your opinion?"
+      placeholder: "Message text"
+    create:
+      success: "The message was sent!"
+
   new_question: "Create new question for the test: %{new_question}"
   edit_question: "Edit the text question: %{edit_question}"
 
+  feedbacks_mailer:
+    send_feedback:
+      subject: "Отзыв от %{subject}"
   tests_mailer:
     completed_test:
       subject: "You jast completed the TestGuru test!"

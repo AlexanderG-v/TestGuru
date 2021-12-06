@@ -7,6 +7,7 @@
       <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
     <% elsif user_signed_in? %>
       <b><%= t('welcome', welcome: current_user.first_name) %></b> |
+      <%= link_to t('feedback'), new_user_feedback_path(current_user) %> |
       <%= link_to t('log_out'), destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to t('log_in'), new_session_path(resource_name) %> |
