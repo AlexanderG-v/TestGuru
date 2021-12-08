@@ -89,6 +89,13 @@ en:
   admin:
     nav:
       header: "Admin Panel"
+    badges:
+      create:
+        success: "Badge was successfully created."
+      update:
+        success: "Badge was successfully udated."
+      destroy: 
+        success: "Badge was successfully deleted."
     tests:
       form_inline:
         submit: "OK"
@@ -125,6 +132,8 @@ en:
         question: "Questions: %{question}"
         answers: "Answers:"
         actions: "Actions"
+      rescue_with_question_not_found:
+        question: "Question not found!"
     answers:
       create:
         success: "Answer was successfully created."
@@ -148,6 +157,9 @@ en:
         user_email: "User's email"
       destroy: 
         success: "Gist was successfully deleted."
+    badges:
+      rescue_with_badge_not_found:
+        badge: "Badge not found!"
 
   feedbacks:
     new:

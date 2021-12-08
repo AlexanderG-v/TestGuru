@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :badges, onli: %i[index]
+    resources :badges, only: %i[index]
     resources :feedbacks, only: %i[new create]
   end
 

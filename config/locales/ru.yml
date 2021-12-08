@@ -90,6 +90,13 @@ ru:
   admin:
     nav:
       header: "Панель Администратора"
+    badges:
+      create:
+        success: "Значок успешно создан."
+      update:
+        success: "Значок успешно обновлен."
+      destroy: 
+        success: "Значок успешно удален."
     tests:
       form_inline:
         submit: "OK"
@@ -126,6 +133,8 @@ ru:
         question: "Вопрос: %{question}"
         answers: "Ответы:"
         actions: "Действия"
+      rescue_with_question_not_found:
+        question: "Вопрос не найден!"
     answers:
       create:
         success: "Ответ успешно создан."
@@ -149,6 +158,10 @@ ru:
         user_email: "Эл. адрес пользователя"
       destroy: 
         success: "Gist успешно удален."
+    badges:
+      rescue_with_badge_not_found:
+        badge: "Значок не найден!"
+
   feedbacks:
     new:
       header: "%{header}, хотите подилиться своим мнением?"
