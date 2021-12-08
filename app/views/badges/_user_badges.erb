@@ -1,0 +1,15 @@
+<div class="row text-center mt-3">
+  <div class="col col-md-12">
+    <h1><%= t('.header') %></h1>
+  </div>
+</div>
+
+<table class="table container mt-3">
+  <tr class="row ustify-content-md-center text-center" style="background-color: #e3f2fd;">
+    <th class="col-md-6"><%= t('.title') %></th>
+    <th class=col-md><%= t('.image') %></th>
+  </tr> 
+
+  <%= render @user_badges %>
+
+</table>

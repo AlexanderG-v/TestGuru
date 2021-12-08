@@ -27,6 +27,7 @@ ru:
   link_to_gist_question: "Gist Вопрос"
   admin_gists: "Gists"
   feedback: "Написать нам"
+  badge: "Награды"
 
   helpers:
     submit:
@@ -69,6 +70,16 @@ ru:
       level: "Уровень"
       questions_count: "Колличество вопросов"
       actions: "Действия"
+
+  badges:
+    index:
+      header: "Доступные награды"
+      title: "Название"
+      image: "Изображение"
+    user_badges:
+      header: "Ваши награды"
+      title: "Название"
+      image: "Изображение"
 
   tests_users:
     show:

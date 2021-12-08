@@ -28,6 +28,7 @@ en:
   link_to_gist_question: "Gist Question"
   admin_gists: "Gists"
   feedback: "Feedback"
+  badges: "Badges"
 
   helpers:
     submit:
@@ -68,6 +69,16 @@ en:
       level: "Level"
       questions_count: "Questions count"
       actions: "Actions"
+
+  badges:
+    index:
+      header: "Tricky badges"
+      title: "Title"
+      image: "Image"
+    user_badges:
+      header: "Your badges"
+      title: "Title"
+      image: "Image"
 
   tests_users:
     show:
