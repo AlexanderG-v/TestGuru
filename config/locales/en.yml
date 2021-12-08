@@ -29,6 +29,7 @@ en:
   admin_gists: "Gists"
   feedback: "Feedback"
   badges: "Badges"
+  link_to_new_badge: "new badge"
 
   helpers:
     submit:
@@ -101,12 +102,27 @@ en:
     nav:
       header: "Admin Panel"
     badges:
+      index:
+        header: "Tricky badges"
+        title: "Title"
+        image: "Image"
+        rule_name: "Rule"
+        rule_value: "Value"
+      new:
+        header: "Create new badge"
       create:
         success: "Badge was successfully created."
       update:
         success: "Badge was successfully udated."
       destroy: 
         success: "Badge was successfully deleted."
+      show:
+        title: "Title: %{title}"
+        image: "Image: %{image}"
+        rule_name: "Rule: %{rule_name}"
+        rule_value: "Value: %{rule_value}"
+      rescue_with_badge_not_found:
+        badge: "Badge not found!"
     tests:
       form_inline:
         submit: "OK"
@@ -168,9 +184,6 @@ en:
         user_email: "User's email"
       destroy: 
         success: "Gist was successfully deleted."
-    badges:
-      rescue_with_badge_not_found:
-        badge: "Badge not found!"
 
   feedbacks:
     new:

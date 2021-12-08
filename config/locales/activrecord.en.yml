@@ -8,6 +8,7 @@ en:
       category: "Category"
       question: "Question"
       tests_user: "Tests - User"
+      badge: "Badge"
 
     attributes:
       test:
@@ -35,6 +36,11 @@ en:
         test: "Test"
         result: "Result"
         current_question: "Current question"
+      badge:
+        title: "Title"
+        image: "Image"
+        rule_name: "Rule"
+        rule_value: "Value"
 
       feedback:
         message: "Message"

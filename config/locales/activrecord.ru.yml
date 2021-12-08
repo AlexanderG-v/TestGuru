@@ -8,6 +8,7 @@ ru:
       category: "Категория"
       question: "Вопрос"
       tests_user: "Тесты - Пользователь"
+      badge: "Значек"
 
     attributes:
       test:
@@ -22,7 +23,6 @@ ru:
         type: "Тип"
         password: "Пароль"
         password_confirmation: "Повторить пороль"
-
       answer:
         body: "Тело ответа"
         correct: "Правильный"
@@ -37,6 +37,11 @@ ru:
         test: "Тест"
         result: "Результат"
         current_question: "Текущий вопрос"
+      badge:
+        title: "Название"
+        image: "Изображение"
+        rule_name: "Правило"
+        rule_value: "Значение"
       
       feedback:
         message: "Сообщение"

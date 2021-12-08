@@ -28,6 +28,8 @@ ru:
   admin_gists: "Gists"
   feedback: "Написать нам"
   badge: "Награды"
+  link_to_new_badge: "Новый знак"
+  
 
   helpers:
     submit:
@@ -102,12 +104,27 @@ ru:
     nav:
       header: "Панель Администратора"
     badges:
+      index:
+        header: "Доступные награды"
+        title: "Название"
+        image: "Изображение"
+        rule_name: "Правило"
+        rule_value: "Значение"
+      new:
+        header: "Создать новый значок"
       create:
         success: "Значок успешно создан."
       update:
         success: "Значок успешно обновлен."
       destroy: 
         success: "Значок успешно удален."
+      show:
+        title: "Название: %{title}"
+        image: "Изображение: %{image}"
+        rule_name: "Правило: %{rule_name}"
+        rule_value: "Значение: %{rule_value}"
+      rescue_with_badge_not_found:
+        badge: "Значок не найден!"
     tests:
       form_inline:
         submit: "OK"
@@ -169,9 +186,6 @@ ru:
         user_email: "Эл. адрес пользователя"
       destroy: 
         success: "Gist успешно удален."
-    badges:
-      rescue_with_badge_not_found:
-        badge: "Значок не найден!"
 
   feedbacks:
     new:
