@@ -13,7 +13,7 @@
 
     <p>
     <%= form.label :rule_name %><br>
-    <%= form.text_field :rule_name, id: :badge_rule_name %>
+    <%= form.select :rule_name, Badge::BADGES_RULES, { prompt: true } %>
   </p><br>
 
     <p>

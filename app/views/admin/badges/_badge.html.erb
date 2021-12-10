@@ -1,7 +1,7 @@
   
 <tr>
   <td class="align-middle"><%= badge.title %></td>
-  <td class="align-middle"><%= badge.image %></td>
+  <td class="align-middle"><%= image_tag badge.image, size: "90x90" %></td>
   <td class="align-middle"><%= badge.rule_name %></td>
   <td class="align-middle"><%= badge.rule_value %></td>
   <td class="align-middle"><%= link_to t('link_to_show'), admin_badge_path(badge) %> |</td>

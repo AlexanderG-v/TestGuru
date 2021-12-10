@@ -94,6 +94,8 @@ ru:
       header: "%{header} тест завершен!"
       failed: "Тест провалился. Ты набрал: %{count}"
       success: "Успешное прохождение теста. Ты набрал: %{count}"
+    update:
+      success: "У Вас новая награда!"
     
   gists:
     create:

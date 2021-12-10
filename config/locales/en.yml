@@ -92,6 +92,8 @@ en:
       header: "%{header} test was completed!"
       failed: "The test failed. You scored: %{count}"
       success: "Successful completion of the test. You scored: %{count}"
+    update:
+      success: "You have new reward!"
     
   gists:
     create:
