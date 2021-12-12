@@ -125,8 +125,6 @@ ru:
         image: "Изображение: %{image}"
         rule_name: "Правило: %{rule_name}"
         rule_value: "Значение: %{rule_value}"
-      rescue_with_badge_not_found:
-        badge: "Значок не найден!"
     tests:
       form_inline:
         submit: "OK"

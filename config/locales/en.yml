@@ -123,8 +123,6 @@ en:
         image: "Image: %{image}"
         rule_name: "Rule: %{rule_name}"
         rule_value: "Value: %{rule_value}"
-      rescue_with_badge_not_found:
-        badge: "Badge not found!"
     tests:
       form_inline:
         submit: "OK"

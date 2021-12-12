@@ -4,8 +4,6 @@
     
     before_action :set_badge, only: %i[show edit update destroy]
 
-    rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_badge_not_found
-
     def index
       @badges = Badge.all
     end
@@ -50,9 +48,5 @@
 
     def badge_params
       params.require(:badge).permit(:title, :image, :rule_name, :rule_value)
-    end
-
-    def rescue_with_badge_not_found
-      render plain: t('.badge')
     end
   end
