@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class Badge < ApplicationRecord
-  # BADGES_RULES = %w[all_tests_by_category pass_test_by_level first_test_passed].freeze
 
   enum badges_rules: {
     all_tests_by_category: 0,

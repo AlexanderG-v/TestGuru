@@ -18,8 +18,8 @@ class BadgeService
   def all_tests_by_category(category_id, badge)
     all_tests_by_category = Test.where(category_id: category_id).count
     users_tests_by_category = TestsUser.success.joins(:test)
-                                        .where(user_id: @user.id, tests: { category_id: category_id })
-                                        .select(:test_id).distinct.count
+                                       .where(user_id: @user.id, tests: { category_id: category_id })
+                                       .select(:test_id).distinct.count
     all_tests_by_category == users_tests_by_category && @test.category.id == badge.rule_value.to_i
   end
 
