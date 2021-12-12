@@ -15,12 +15,12 @@ class BadgeService
 
   private
 
-  def all_tests_by_category(category_title, badge)
-    all_tests_by_category = Test.tests_by_category(category_title).count
+  def all_tests_by_category(category_id, badge)
+    all_tests_by_category = Test.where(category_id: category_id).count
     users_tests_by_category = TestsUser.success.joins(:test)
-                                       .where(user_id: @user.id, tests: { category_id: @test.category.id })
-                                       .select(:test_id).distinct.count
-    all_tests_by_category == users_tests_by_category && @test.category.title == badge.rule_value
+                                        .where(user_id: @user.id, tests: { category_id: category_id })
+                                        .select(:test_id).distinct.count
+    all_tests_by_category == users_tests_by_category && @test.category.id == badge.rule_value.to_i
   end
 
   def pass_test_by_level(level, badge)

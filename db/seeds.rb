@@ -147,7 +147,7 @@ answers = Answer.create!([
 
 badges = Badge.create!([
                           { title: 'Биология', image: 'level1.png',
-                            rule_name: 'all_tests_by_category', rule_value: categories[1].title },
+                            rule_name: 'all_tests_by_category', rule_value: categories[1].id },
                           { title: 'С первой попытки', image: 'first_try.png',
                             rule_name: 'first_test_passed', rule_value: tests[0].title},
                           { title: 'Уровень', image: 'badge.png',
