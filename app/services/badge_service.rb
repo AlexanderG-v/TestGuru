@@ -13,9 +13,11 @@ class BadgeService
     end
   end
 
+  private
+
   def all_tests_by_category(category_title, badge)
     all_tests_by_category = Test.tests_by_category(category_title).count
-    users_tests_by_category = TestsUser.successfull.joins(:test)
+    users_tests_by_category = TestsUser.success.joins(:test)
                                        .where(user_id: @user.id, tests: { category_id: @test.category.id })
                                        .select(:test_id).distinct.count
     all_tests_by_category == users_tests_by_category && @test.category.title == badge.rule_value
@@ -23,7 +25,7 @@ class BadgeService
 
   def pass_test_by_level(level, badge)
     pass_test_by_level = Test.by_level(level).count
-    users_all_tests_by_level = TestsUser.successfull.joins(:test)
+    users_all_tests_by_level = TestsUser.success.joins(:test)
                                         .where(user_id: @user.id, tests: { level: level })
                                         .select(:test_id).distinct.count
     pass_test_by_level == users_all_tests_by_level && @test.level == badge.rule_value.to_i

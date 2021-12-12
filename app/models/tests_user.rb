@@ -9,7 +9,7 @@ class TestsUser < ApplicationRecord
 
   before_validation :before_validation_set_current_question
 
-  scope :successfull, -> { where(success: true) }
+  scope :success, -> { where(success: true) }
 
   def current_question_number
     test.questions.order(:id).where('id < ?', current_question.id).size + 1
@@ -38,7 +38,7 @@ class TestsUser < ApplicationRecord
   end
 
   def success_true
-    update(success: true)
+    update!(success: true)
   end
 
   private
