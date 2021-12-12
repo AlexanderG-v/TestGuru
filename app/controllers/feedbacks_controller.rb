@@ -2,7 +2,7 @@
 
 class FeedbacksController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_user
+  before_action :set_user
 
   def new
     @feedback = @user.feedbacks.new
@@ -25,7 +25,7 @@ class FeedbacksController < ApplicationController
     params.require(:feedback).permit(:message)
   end
 
-  def find_user
+  def set_user
     @user = current_user
   end
 end

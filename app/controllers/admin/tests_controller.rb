@@ -1,7 +1,7 @@
 class Admin::TestsController < Admin::BaseController
  
   before_action :set_tests, only: %i[index update_inline]
-  before_action :find_test, only: %i[show edit update destroy update_inline]
+  before_action :set_test, only: %i[show edit update destroy update_inline]
 
   def index; end
 
@@ -55,7 +55,7 @@ class Admin::TestsController < Admin::BaseController
     @test.author = current_user
   end
 
-  def find_test
+  def set_test
     @test = Test.find(params[:id])
   end
 

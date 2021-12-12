@@ -2,12 +2,13 @@
 
   class Admin::BadgesController < Admin::BaseController
     
-    before_action :set_badges, only: %i[index]
-    before_action :find_badge, only: %i[show edit update destroy]
+    before_action :set_badge, only: %i[show edit update destroy]
 
     rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_badge_not_found
 
-    def index; end
+    def index
+      @badges = Badge.all
+    end
 
     def show; end
 
@@ -43,11 +44,7 @@
 
     private
 
-    def set_badges
-      @badges = Badge.all
-    end
-
-    def find_badge
+    def set_badge
       @badge = Badge.find(params[:id])
     end
 
