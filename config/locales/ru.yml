@@ -27,6 +27,9 @@ ru:
   link_to_gist_question: "Gist Вопрос"
   admin_gists: "Gists"
   feedback: "Написать нам"
+  badge: "Награды"
+  link_to_new_badge: "Новый знак"
+  
 
   helpers:
     submit:
@@ -70,6 +73,16 @@ ru:
       questions_count: "Колличество вопросов"
       actions: "Действия"
 
+  badges:
+    index:
+      header: "Доступные награды"
+      title: "Название"
+      image: "Изображение"
+    user_badges:
+      header: "Ваши награды"
+      title: "Название"
+      image: "Изображение"
+
   tests_users:
     show:
       header: "Тест: %{header}"
@@ -81,6 +94,8 @@ ru:
       header: "%{header} тест завершен!"
       failed: "Тест провалился. Ты набрал: %{count}"
       success: "Успешное прохождение теста. Ты набрал: %{count}"
+    update:
+      success: "У Вас новая награда!"
     
   gists:
     create:
@@ -90,6 +105,26 @@ ru:
   admin:
     nav:
       header: "Панель Администратора"
+    badges:
+      index:
+        header: "Доступные награды"
+        title: "Название"
+        image: "Изображение"
+        rule_name: "Правило"
+        rule_value: "Значение"
+      new:
+        header: "Создать новый значок"
+      create:
+        success: "Значок успешно создан."
+      update:
+        success: "Значок успешно обновлен."
+      destroy: 
+        success: "Значок успешно удален."
+      show:
+        title: "Название: %{title}"
+        image: "Изображение: %{image}"
+        rule_name: "Правило: %{rule_name}"
+        rule_value: "Значение: %{rule_value}"
     tests:
       form_inline:
         submit: "OK"
@@ -126,6 +161,8 @@ ru:
         question: "Вопрос: %{question}"
         answers: "Ответы:"
         actions: "Действия"
+      rescue_with_question_not_found:
+        question: "Вопрос не найден!"
     answers:
       create:
         success: "Ответ успешно создан."
@@ -149,6 +186,7 @@ ru:
         user_email: "Эл. адрес пользователя"
       destroy: 
         success: "Gist успешно удален."
+
   feedbacks:
     new:
       header: "%{header}, хотите подилиться своим мнением?"

@@ -13,6 +13,7 @@ Question.destroy_all
 Test.destroy_all
 Category.destroy_all
 User.destroy_all
+Badge.destroy_all
 
 categories = Category.create!([
                                 { title: 'История' },
@@ -22,7 +23,9 @@ categories = Category.create!([
 
 users = User.create!([
                        { first_name: 'Александр', last_name: 'Петров', type: 'Admin', 
-                         email: 'alexandr@gmail.com', password: '123456' }
+                         email: 'alexandr@gmail.com', password: '123456' },
+                       { first_name: 'Петр', last_name: 'Петров', type: 'User', 
+                         email: 'petr@gmail.com', password: '123456' }
                      ])
 
 tests = Test.create!([
@@ -141,3 +144,12 @@ answers = Answer.create!([
                            { body: 'Аргумент', question: questions[17] },
                            { body: 'Эпилог', question: questions[17] }
                          ])
+
+badges = Badge.create!([
+                          { title: 'Биология', image: 'level1.png',
+                            rule_name: 'all_tests_by_category', rule_value: categories[1].id },
+                          { title: 'С первой попытки', image: 'first_try.png',
+                            rule_name: 'first_test_passed', rule_value: tests[0].title},
+                          { title: 'Уровень', image: 'badge.png',
+                            rule_name: 'pass_test_by_level', rule_value: 1 }
+                        ])

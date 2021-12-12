@@ -28,6 +28,8 @@ en:
   link_to_gist_question: "Gist Question"
   admin_gists: "Gists"
   feedback: "Feedback"
+  badges: "Badges"
+  link_to_new_badge: "new badge"
 
   helpers:
     submit:
@@ -69,6 +71,16 @@ en:
       questions_count: "Questions count"
       actions: "Actions"
 
+  badges:
+    index:
+      header: "Tricky badges"
+      title: "Title"
+      image: "Image"
+    user_badges:
+      header: "Your badges"
+      title: "Title"
+      image: "Image"
+
   tests_users:
     show:
       header: "Test: %{header}"
@@ -80,6 +92,8 @@ en:
       header: "%{header} test was completed!"
       failed: "The test failed. You scored: %{count}"
       success: "Successful completion of the test. You scored: %{count}"
+    update:
+      success: "You have new reward!"
     
   gists:
     create:
@@ -89,6 +103,26 @@ en:
   admin:
     nav:
       header: "Admin Panel"
+    badges:
+      index:
+        header: "Tricky badges"
+        title: "Title"
+        image: "Image"
+        rule_name: "Rule"
+        rule_value: "Value"
+      new:
+        header: "Create new badge"
+      create:
+        success: "Badge was successfully created."
+      update:
+        success: "Badge was successfully udated."
+      destroy: 
+        success: "Badge was successfully deleted."
+      show:
+        title: "Title: %{title}"
+        image: "Image: %{image}"
+        rule_name: "Rule: %{rule_name}"
+        rule_value: "Value: %{rule_value}"
     tests:
       form_inline:
         submit: "OK"
@@ -125,6 +159,8 @@ en:
         question: "Questions: %{question}"
         answers: "Answers:"
         actions: "Actions"
+      rescue_with_question_not_found:
+        question: "Question not found!"
     answers:
       create:
         success: "Answer was successfully created."

@@ -1,5 +1,6 @@
-class TestsUser < ApplicationRecord
+# frozen_string_literal: true
 
+class TestsUser < ApplicationRecord
   SUCCESS_RATIO = 85
 
   belongs_to :user
@@ -7,6 +8,8 @@ class TestsUser < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_current_question
+
+  scope :success, -> { where(success: true) }
 
   def current_question_number
     test.questions.order(:id).where('id < ?', current_question.id).size + 1
@@ -19,7 +22,7 @@ class TestsUser < ApplicationRecord
   def rate?
     success_rate >= SUCCESS_RATIO
   end
-  
+
   def completed?
     current_question.nil?
   end
@@ -32,6 +35,10 @@ class TestsUser < ApplicationRecord
 
   def total_questions
     test.questions.count
+  end
+
+  def success_true
+    update!(success: true)
   end
 
   private

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_03_183606) do
+ActiveRecord::Schema.define(version: 2021_12_09_183421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,11 +18,27 @@ ActiveRecord::Schema.define(version: 2021_12_03_183606) do
   create_table "answers", force: :cascade do |t|
     t.string "body", null: false
     t.boolean "correct", default: false, null: false
-    t.integer "question_id", null: false
+    t.bigint "question_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["body"], name: "index_answers_on_body"
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "badges", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "image", null: false
+    t.string "rule_name", null: false
+    t.string "rule_value", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "badges_users", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "badge_id", null: false
+    t.index ["badge_id"], name: "index_badges_users_on_badge_id"
+    t.index ["user_id"], name: "index_badges_users_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -41,8 +57,8 @@ ActiveRecord::Schema.define(version: 2021_12_03_183606) do
 
   create_table "gists", force: :cascade do |t|
     t.string "gist_url"
-    t.integer "question_id", null: false
-    t.integer "user_id", null: false
+    t.bigint "question_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["question_id"], name: "index_gists_on_question_id"
@@ -51,7 +67,7 @@ ActiveRecord::Schema.define(version: 2021_12_03_183606) do
 
   create_table "questions", force: :cascade do |t|
     t.string "body", null: false
-    t.integer "test_id", null: false
+    t.bigint "test_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["body"], name: "index_questions_on_body"
@@ -61,8 +77,8 @@ ActiveRecord::Schema.define(version: 2021_12_03_183606) do
   create_table "tests", force: :cascade do |t|
     t.string "title", null: false
     t.integer "level", default: 1, null: false
-    t.integer "category_id", null: false
-    t.integer "author_id", null: false
+    t.bigint "category_id", null: false
+    t.bigint "author_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_tests_on_author_id"
@@ -71,12 +87,13 @@ ActiveRecord::Schema.define(version: 2021_12_03_183606) do
   end
 
   create_table "tests_users", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "test_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "test_id", null: false
     t.integer "result", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "current_question_id"
+    t.bigint "current_question_id"
+    t.boolean "success", default: false
     t.index ["current_question_id"], name: "index_tests_users_on_current_question_id"
     t.index ["test_id", "user_id"], name: "composite_index"
     t.index ["test_id"], name: "index_tests_users_on_test_id"
@@ -111,6 +128,8 @@ ActiveRecord::Schema.define(version: 2021_12_03_183606) do
   end
 
   add_foreign_key "answers", "questions"
+  add_foreign_key "badges_users", "badges"
+  add_foreign_key "badges_users", "users"
   add_foreign_key "feedbacks", "users"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"

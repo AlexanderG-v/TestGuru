@@ -12,6 +12,13 @@ class TestsUsersController < ApplicationController
     @tests_user.accept!(params[:answer_ids])
 
     if @tests_user.completed?
+      if @tests_user.rate?
+
+        @tests_user.success_true
+        badge_service = BadgeService.new(@tests_user).call
+        flash[:notice] = t('.success') if badge_service.present?
+      end
+
       TestsMailer.completed_test(@tests_user).deliver_now
       redirect_to attempt_tests_user_path(@tests_user)
     else

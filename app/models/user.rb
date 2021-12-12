@@ -12,6 +12,8 @@ class User < ApplicationRecord
 
   has_many :tests_users, dependent: :destroy
   has_many :tests, through: :tests_users
+  has_many :badges_users, dependent: :destroy
+  has_many :badges, through: :badges_users
   has_many :gists, dependent: :destroy
   has_many :author_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
   has_many :feedbacks, dependent: :destroy

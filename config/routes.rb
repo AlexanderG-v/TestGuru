@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
+    resources :badges, only: %i[index]
     resources :feedbacks, only: %i[new create]
   end
 
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :badges
     resources :gists, only: %i[index destroy]
     resources :tests do
       patch :update_inline, on: :member
