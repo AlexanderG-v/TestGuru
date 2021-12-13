@@ -11,6 +11,7 @@ class Test < ApplicationRecord
   validates :title, presence: true
   validates :title, uniqueness: { scope: :level }
   validates :level, numericality: { only_integer: true, greater_than: 0 }
+  validates :timer, numericality: { only_integer: true, greater_than: 0, allow_nil: true }
 
   scope :easy_tests, -> { where(level: 0..1) }
   scope :mid_tests, -> { where(level: 2..4) }
