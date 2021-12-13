@@ -30,6 +30,7 @@ ru:
   badge: "Награды"
   link_to_new_badge: "Новый знак"
   min: "%{min} мин."
+  not_limited: "Не ограничено"
 
   helpers:
     submit:
@@ -71,6 +72,7 @@ ru:
       title: "Название"
       level: "Уровень"
       questions_count: "Колличество вопросов"
+      timer: "Время отведенное на тест"
       actions: "Действия"
 
   badges:
