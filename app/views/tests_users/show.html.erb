@@ -14,6 +14,12 @@
   <%= t('.question', question: @tests_user.current_question.body) %>
 </b>
 
+<% if @tests_user.test.timer.present? %>
+  <b data-time_start="<%= @tests_user.created_at %>",
+    data-duration="<%= @tests_user.test.timer %>", class='timer'>
+  </b>
+<% end %>
+
 <%= form_with url: tests_user_path(@tests_user), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @tests_user.current_question.answers, :id, :body, include_hidden:
   false do |b| %>
