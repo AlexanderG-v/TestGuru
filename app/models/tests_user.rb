@@ -24,7 +24,15 @@ class TestsUser < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_is_up?
+  end
+
+  def time_is_up?
+    test.timer.present? && time_left.negative?
+  end
+  
+  def time_left
+    created_at - Time.now + test.timer * 60
   end
 
   def accept!(answer_ids)

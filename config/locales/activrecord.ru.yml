@@ -16,6 +16,7 @@ ru:
         author: "Автор"
         category: "Категория"
         level: "Уровень"
+        timer: "Таймер"
       user:
         email: "Эл. адрес"
         first_name: "Имя"

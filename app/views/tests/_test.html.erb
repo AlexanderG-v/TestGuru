@@ -2,5 +2,12 @@
     <td class=col-md-6><%= test.title %></td>
     <td class=col-md><%= test.level %></td>
     <td class=col-md><%= test.questions.count %></td>
+    <td class=col-md>
+      <% if test.timer.present? %>
+        <%= t('min', min: test.timer) %>
+      <% else %>
+        <%= t('not_limited') %>
+      <% end %>
+    </td>
     <td class=col-md><%= button_to t('button_to_start'), start_test_path(test), class: 'btn btn-outline-secondary btn-sm' %></td>
   </tr>

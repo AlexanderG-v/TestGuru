@@ -30,6 +30,8 @@ en:
   feedback: "Feedback"
   badges: "Badges"
   link_to_new_badge: "new badge"
+  min: "%{min} min."
+  not_limited: "Not limited"
 
   helpers:
     submit:
@@ -69,6 +71,7 @@ en:
       title: "Title"
       level: "Level"
       questions_count: "Questions count"
+      timer: "Time provided for the test"
       actions: "Actions"
 
   badges:
@@ -137,12 +140,14 @@ en:
         title: "Title"
         level: "Level"
         questions_count: "Questions count"
+        timer: "Time provided for the test"
         actions: "Actions"
       new:
         header: "Create new test"
       show:
         title: "Title: %{title}"
         level: "Level: %{level}"
+        timer: "Time provided for the test: %{timer} min."
         questions: "Questions:"
         actions: "Actions"
       edit:

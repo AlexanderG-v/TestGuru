@@ -29,7 +29,8 @@ ru:
   feedback: "Написать нам"
   badge: "Награды"
   link_to_new_badge: "Новый знак"
-  
+  min: "%{min} мин."
+  not_limited: "Не ограничено"
 
   helpers:
     submit:
@@ -71,6 +72,7 @@ ru:
       title: "Название"
       level: "Уровень"
       questions_count: "Колличество вопросов"
+      timer: "Время отведенное на тест"
       actions: "Действия"
 
   badges:
@@ -139,12 +141,14 @@ ru:
         title: "Название"
         level: "Уровень"
         questions_count: "Колличество вопросов"
+        timer: "Время отведенное на тест"
         actions: "Действия"
       new:
         header: "Создать новый тест"
       show:
         title: "Название: %{title}"
         level: "Уровень: %{level}"
+        timer: "Время отведенное на тест: %{timer} мин."
         questions: "Вопросы:"
         actions: "Действия"
       edit:
