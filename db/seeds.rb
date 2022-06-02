@@ -23,7 +23,7 @@ categories = Category.create!([
 
 users = User.create!([
                        { first_name: 'Александр', last_name: 'Петров', type: 'Admin', 
-                         email: 'alexandr@gmail.com', password: '123456' },
+                         email: ENV['SEEDS_USERNAME'], password: ENV['SEEDS_PASSWORD'] },
                        { first_name: 'Петр', last_name: 'Петров', type: 'User', 
                          email: 'petr@gmail.com', password: '123456' }
                      ])
